@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Blossom</title>
+    <link rel="stylesheet" href="styles/products.css">
+    <link rel="icon" type="image/x-icon" href="images/webicon.jpg">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Blossom Products</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container products">
+        <div class="card" onclick="openModal('In Harmony Bouquet', '£49.99')">
+            <img src="images/flowers/1.png" alt="Product Image">
+            <p>In Harmony Bouquet</p>
+            <p>£49.99</p>
+        </div>
+        
+        <div class="card" onclick="openModal('Botanical Dream Bouquet', '£32.99')">
+            <img src="images/flowers/2.png" alt="Product Image">
+            <p>Botanical Dream Bouquet</p>
+            <p>£32.99</p>
+        </div>
+        
+        <div class="card" onclick="openModal('Afternoon Tea Bouquet', '£44.99')">
+            <img src="images/flowers/3.png" alt="Product Image">
+            <p>Afternoon Tea Bouquet</p>
+            <p>£44.99</p>
+        </div>
+        
+        <div class="card" onclick="openModal('Zest for Life Bouquet', '£49.99')">
+            <img src="images/flowers/4.png" alt="Product Image">
+            <p>Zest for Life Bouquet</p>
+            <p>£49.99</p>
+        </div>
+        
+        <div class="card" onclick="openModal('Sweet As Can Be Bouquet', '£54.99')">
+            <img src="images/flowers/5.png" alt="Product Image">
+            <p>Sweet As Can Be Bouquet</p>
+            <p>£54.99</p>
+        </div>
+        
+        <div class="card" onclick="openModal('Sunset Serenade Bouquet', '£55')">
+            <img src="images/flowers/6.png" alt="Product Image">
+            <p>Sunset Serenade Bouquet</p>
+            <p>£55</p>
+        </div>
+        
+        <div class="card" onclick="openModal('Mani Pedi Bouquet', '£60')">
+            <img src="images/flowers/7.png" alt="Product Image">
+            <p>Mani Pedi Bouquet</p>
+            <p>£60</p>
+        </div>
+
+        <div class="card" onclick="openModal('You\'re a Gem Bouquet', '£43')">
+            <img src="images/flowers/8.png" alt="Product Image">
+            <p>You're a Gem Bouquet</p>
+            <p>£43</p>
+        </div>
+
+
+        <div class="card" onclick="openModal('You\'re a Gem Bouquet', '£43')">
+            <img src="images/flowers/9.png" alt="Product Image">
+            <p>Lucky Bouquet</p>
+            <p>£77</p>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="product-name"></h2>
+            <p id="product-price"></p>
+            <button onclick="redirectToContact()">Order Now</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h3>Blossom Flower Shop</h3>
+                <p>Visit us: 25 Regent St, Bloomtown</p>
+                <p>&copy; 2024 Blossom Flower Shop. All rights reserved.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/LondonFlowers/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/shorts/ra26m73ppvQ" target="_blank"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="https://www.instagram.com/bloomsburyflowerslondon/" target="_blank"><img src="images/insta.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav ul').classList.toggle('show');
+        });
+
+        function openModal(productName, productPrice) {
+            document.getElementById('product-name').textContent = productName;
+            document.getElementById('product-price').textContent = productPrice;
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function redirectToContact() {
+            window.location.href = 'index.html#contact';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('modal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

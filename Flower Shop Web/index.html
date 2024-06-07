@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenwich Flower Shop</title>
+    <link rel="stylesheet" href="styles/flower_menu.css">
+    <link rel="icon" type="image/x-icon" href="images/webicon.jpg">
+    <script src="scripts\flower_menu.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <h1>Blossom</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <video autoplay muted loop id="heroVideo">
+            <source src="videos/background.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="overlay"></div>
+        <div class="container">
+            <h2>Welcome to Blossom</h2>
+            <p>Your favorite flower shop</p>
+        </div>
+    </section>
+    
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>At <span class="highlight">Blossom</span>, we're passionate about flowers and the joy they bring to people's lives. Our journey began with a simple vision: to create stunning floral arrangements that captivate the senses and make every occasion truly special.</p>
+                
+                <p>With years of experience and a team of dedicated florists, we take pride in offering a wide variety of fresh flowers sourced from local growers and international markets. From classic roses to exotic orchids, our selection is carefully curated to ensure quality and uniqueness.</p>
+                
+                <p>What sets us apart is our commitment to creativity and personalization. Whether you're celebrating a birthday, anniversary, wedding, or simply want to brighten someone's day, our talented designers are here to craft custom arrangements that reflect your style and sentiment.</p>
+                
+                <p>But <span class="highlight">Blossom</span> is more than just a flower shop – it's a destination for inspiration and celebration. From workshops and events to community initiatives, we're dedicated to fostering a love for floristry and enriching the lives of our customers and neighbors.</p>
+                
+                <p>Thank you for choosing <span class="highlight">Blossom</span>. We look forward to bringing beauty and joy into your world, one bloom at a time.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Our Top Requests</h2>
+            <div class="service-carousel">
+                <div class="carousel-item">
+                    <img src="images\flowers\carr1.png" alt="Bouquets">
+                    <div class="carousel-text">
+                        <h3>Bouquets</h3>
+                        <p>Beautiful bouquets for all occasions.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images\flowers\carr2.png" alt="Weddings">
+                    <div class="carousel-text">
+                        <h3>Weddings</h3>
+                        <p>Exquisite floral arrangements for your special day.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images\flowers\carr3.png" alt="Events">
+                    <div class="carousel-text">
+                        <h3>Events</h3>
+                        <p>Custom floral designs for events and corporate functions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="contact.php" method="post" onsubmit="return validateForm()">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-media">
+                <a href="https://www.facebook.com/LondonFlowers/"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/shorts/ra26m73ppvQ"><img src="images\youtube.png" alt="YouTube"></a>
+                <a href="https://www.instagram.com/bloomsburyflowerslondon/"><img src="images\insta.png" alt="Instagram"></a>
+            </div>
+            <p>&copy; 2024 Blossom Flower Shop. All rights reserved.</p>
+            <p>Visit us: 25 Regent St, Bloomtown</p>
+            <div id="map"></div>
+        </div>
+    </footer>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
